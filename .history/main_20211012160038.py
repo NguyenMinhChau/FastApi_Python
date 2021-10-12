@@ -13,8 +13,7 @@ def read_root():
 def read_root():
     return {
         "UserName": "NguyenMinhChau",
-        "Password": "123456"
-    }
+        "Password": "123456"}
 
 # http://localhost:8000/
 # http://localhost:8000/todo

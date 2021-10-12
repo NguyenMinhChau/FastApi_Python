@@ -11,10 +11,7 @@ def read_root():
     return {"todo": "ListItem"}
 @app.get("/info")
 def read_root():
-    return {
-        "UserName": "NguyenMinhChau",
-        "Password": "123456"
-    }
+    return {"todo": "ListItem"}
 
 # http://localhost:8000/
 # http://localhost:8000/todo
