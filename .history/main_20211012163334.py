@@ -1,7 +1,5 @@
 from fastapi import FastAPI
-# tạo file __init__.py để gợi ý import trong models
-# from .models.Mymodel import HangHoa
-
+from .models import 
 app = FastAPI()
 @app.get("/")
 async def read_root():
@@ -16,13 +14,12 @@ async def read_root():
         "Password": "123456"
     }
 #snake_case
-# @app.post("/hanghoa")
-# async def them_hang_hoa(model: HangHoa):
-#     print(model)
-#     return {
-#         "UserName": "NguyenMinhChau",
-#         "Password": "123456"
-#     }
+@app.post("/hanghoa")
+async def them_hang_hoa():
+    return {
+        "UserName": "NguyenMinhChau",
+        "Password": "123456"
+    }
 
 # http://localhost:8000/
 # http://localhost:8000/todo
