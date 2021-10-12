@@ -103,6 +103,7 @@ async def delete_todo(id: int) -> dict:
     for todo in data:
         if int(todo["id"]) == id:
             return todo
+
     return {
         "data": f"Todo with id {id} not found."
     }

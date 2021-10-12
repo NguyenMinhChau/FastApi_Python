@@ -35,6 +35,7 @@ async def get_todos() -> dict:
     my_path_file = os.path.join(folder,"db.json")
     with open(my_path_file,"r") as the_file:
         data = the_file.read()
+        print(data)
     data = json.loads(data)
     return { "data": data }
 
@@ -45,6 +46,7 @@ my_path_file = os.path.join(folder,"db.json")
 def read_todo_data():
     with open(my_path_file,"r") as the_file:
         data = the_file.read()
+        print(data)
     return json.loads(data)
 
 @app.post("/todo", tags=["todos"])
@@ -55,6 +57,7 @@ async def add_todo(todo: TodoItem) -> dict:
         'id': todo.id,
         'item': todo.item,
     })
+    print(data)
     # Save
     with open(my_path_file,"w") as the_file:
         # the_file.write(json.dumps(data))
@@ -69,40 +72,11 @@ async def update_todo(id: int, body: TodoItem) -> dict:
     for todo in data:
         if int(todo["id"]) == id:
             todo["item"] = body.item
-            with open(my_path_file,"w") as the_file:
-                # the_file.write(json.dumps(data))
-                json.dump(data, the_file, indent=4)
+            
             return {
                 "data": f"Todo with id {id} has been updated."
             }
 
-    return {
-        "data": f"Todo with id {id} not found."
-    }
-@app.delete("/todo/{id}", tags=["todos"])
-async def delete_todo(id: int) -> dict:
-    data = read_todo_data()
-    for todo in data:
-        if int(todo["id"]) == id:
-            data.remove(todo)
-            with open(my_path_file,"w") as the_file:
-                # the_file.write(json.dumps(data))
-                json.dump(data, the_file, indent=4)
-            return {
-                "data": f"Todo with id {id} has been removed."
-            }
-
-    return {
-        "data": f"Todo with id {id} not found."
-    }
-
-
-@app.get("/todo/{id}", tags=["todos"])
-async def delete_todo(id: int) -> dict:
-    data = read_todo_data()
-    for todo in data:
-        if int(todo["id"]) == id:
-            return todo
     return {
         "data": f"Todo with id {id} not found."
     }

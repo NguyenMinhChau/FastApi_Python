@@ -95,15 +95,4 @@ async def delete_todo(id: int) -> dict:
     return {
         "data": f"Todo with id {id} not found."
     }
-
-
-@app.get("/todo/{id}", tags=["todos"])
-async def delete_todo(id: int) -> dict:
-    data = read_todo_data()
-    for todo in data:
-        if int(todo["id"]) == id:
-            return todo
-    return {
-        "data": f"Todo with id {id} not found."
-    }
 # Run: python backend\main.py

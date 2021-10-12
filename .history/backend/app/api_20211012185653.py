@@ -79,31 +79,4 @@ async def update_todo(id: int, body: TodoItem) -> dict:
     return {
         "data": f"Todo with id {id} not found."
     }
-@app.delete("/todo/{id}", tags=["todos"])
-async def delete_todo(id: int) -> dict:
-    data = read_todo_data()
-    for todo in data:
-        if int(todo["id"]) == id:
-            data.remove(todo)
-            with open(my_path_file,"w") as the_file:
-                # the_file.write(json.dumps(data))
-                json.dump(data, the_file, indent=4)
-            return {
-                "data": f"Todo with id {id} has been removed."
-            }
-
-    return {
-        "data": f"Todo with id {id} not found."
-    }
-
-
-@app.get("/todo/{id}", tags=["todos"])
-async def delete_todo(id: int) -> dict:
-    data = read_todo_data()
-    for todo in data:
-        if int(todo["id"]) == id:
-            return todo
-    return {
-        "data": f"Todo with id {id} not found."
-    }
 # Run: python backend\main.py

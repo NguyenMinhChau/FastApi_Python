@@ -1,0 +1,14 @@
+[
+    {
+        "id": "1",
+        "item": "FastAPI react"
+    },
+    {
+        "id": "2",
+        "item": "Cycle around town."
+    },
+    {
+        "id": 3,
+        "item": "FastAPI Easy"
+    }
+]
