@@ -8,9 +8,11 @@ from pathlib import Path
 import os
 from .models.Todo import TodoItem
 import logging
-#LOG: Thứ tự debug(), info(), warning(), error(), and critical()
-logging.basicConfig(format='%(name)s - %(levelname)s - %(message)s')
 
+FORMAT = '%(asctime)-15s %(clientip)s %(user)-8s %(message)s'
+logging.basicConfig(format=FORMAT)
+d = {'clientip': '192.168.0.1', 'user': 'fbloggs'}
+logger = logging.getLogger('tcpserver')
 app = FastAPI()
 
 # chỉ định các host được truy cập API này
@@ -29,7 +31,7 @@ app.add_middleware(
 
 @app.get("/", tags=["root"])
 async def read_root() -> dict:
-    logging.critical('This will get logged to a file')
+    logger.warning('Protocol problem: %s', 'connection reset', extra=d)
     return {"message": "Welcome to your todo list."}
 
 

@@ -8,8 +8,6 @@ from pathlib import Path
 import os
 from .models.Todo import TodoItem
 import logging
-#LOG: Thứ tự debug(), info(), warning(), error(), and critical()
-logging.basicConfig(format='%(name)s - %(levelname)s - %(message)s')
 
 app = FastAPI()
 
@@ -29,7 +27,7 @@ app.add_middleware(
 
 @app.get("/", tags=["root"])
 async def read_root() -> dict:
-    logging.critical('This will get logged to a file')
+    logging.de
     return {"message": "Welcome to your todo list."}
 
 
@@ -50,7 +48,6 @@ def read_todo_data():
     with open(my_path_file,"r") as the_file:
         data = the_file.read()
     return json.loads(data)
-
 
 @app.post("/todo", tags=["todos"])
 async def add_todo(todo: TodoItem) -> dict:
