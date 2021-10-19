@@ -1,4 +1,4 @@
-from fastapi import FastAPI, UploadFile, File
+from fastapi import FastAPI
 # chỉ định các host được truy cập API
 from fastapi.middleware.cors import CORSMiddleware
 # dùng file json
@@ -38,7 +38,7 @@ app.add_middleware(
 
 @app.get("/", tags=["root"])
 async def read_root() -> dict:
-    logging.error("This is error")
+    logging.e
     return {"message": "Welcome to your todo list."}
 
 
@@ -56,16 +56,10 @@ folder = Path(__file__).parent
 my_path_file = os.path.join(folder,"db.json")
 
 def read_todo_data():
-    try:
-        with open(my_path_file,"r") as the_file:
-            data = the_file.read()
-        return json.loads(data)
-    except Exception as e:
-        logging.error(e)
+    with open(my_path_file,"r") as the_file:
+        data = the_file.read()
+    return json.loads(data)
 
-@app.post("/upload")
-def upload_single_file(file: UploadFile = File(...)):
-    return {"file_size": len(file)}
 
 @app.post("/todo", tags=["todos"])
 async def add_todo(todo: TodoItem) -> dict:

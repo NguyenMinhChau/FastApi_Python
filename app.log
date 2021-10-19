@@ -1,4 +1,0 @@
-root - WARNING - This will get logged to a file
-uvicorn.error - INFO - Started server process [7224]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.

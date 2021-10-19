@@ -64,8 +64,7 @@ def read_todo_data():
         logging.error(e)
 
 @app.post("/upload")
-def upload_single_file(file: UploadFile = File(...)):
-    return {"file_size": len(file)}
+def upload_single_file(file: U):
 
 @app.post("/todo", tags=["todos"])
 async def add_todo(todo: TodoItem) -> dict:

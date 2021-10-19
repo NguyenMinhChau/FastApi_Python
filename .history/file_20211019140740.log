@@ -1,0 +1,9 @@
+2021-10-19 14:06:10,507 - uvicorn.error - INFO - Started server process [17956]
+2021-10-19 14:06:10,508 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-19 14:06:10,508 - uvicorn.error - INFO - Application startup complete.
+2021-10-19 14:06:24,047 - uvicorn.error - INFO - Started server process [16936]
+2021-10-19 14:06:24,048 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-19 14:06:24,048 - uvicorn.error - INFO - Application startup complete.
+2021-10-19 14:07:41,737 - uvicorn.error - INFO - Started server process [6492]
+2021-10-19 14:07:41,738 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-19 14:07:41,738 - uvicorn.error - INFO - Application startup complete.

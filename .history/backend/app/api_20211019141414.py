@@ -1,4 +1,4 @@
-from fastapi import FastAPI, UploadFile, File
+from fastapi import FastAPI
 # chỉ định các host được truy cập API
 from fastapi.middleware.cors import CORSMiddleware
 # dùng file json
@@ -63,9 +63,7 @@ def read_todo_data():
     except Exception as e:
         logging.error(e)
 
-@app.post("/upload")
-def upload_single_file(file: UploadFile = File(...)):
-    return {"file_size": len(file)}
+@app.pos
 
 @app.post("/todo", tags=["todos"])
 async def add_todo(todo: TodoItem) -> dict:

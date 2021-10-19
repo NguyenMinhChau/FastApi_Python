@@ -1,4 +1,4 @@
-from fastapi import FastAPI, UploadFile, File
+from fastapi import FastAPI
 # chỉ định các host được truy cập API
 from fastapi.middleware.cors import CORSMiddleware
 # dùng file json
@@ -9,16 +9,8 @@ import os
 from .models.Todo import TodoItem
 import logging
 #LOG: Thứ tự debug(), info(), warning(), error(), and critical()
-
-#Cách 1
-#logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s',level=logging.INFO)
-#Cách 2: Lưu xuống file.log
-logger = logging.getLogger()
-f_handler = logging.FileHandler('file.log')
-f_handler.setLevel(logging.DEBUG)
-f_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-f_handler.setFormatter(f_format)
-logger.addHandler(f_handler)
+logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s',level=logging.INFO)
+logging.critical('This will get logged to a file')
 
 app = FastAPI()
 
@@ -56,16 +48,10 @@ folder = Path(__file__).parent
 my_path_file = os.path.join(folder,"db.json")
 
 def read_todo_data():
-    try:
-        with open(my_path_file,"r") as the_file:
-            data = the_file.read()
-        return json.loads(data)
-    except Exception as e:
-        logging.error(e)
+    with open(my_path_file,"r") as the_file:
+        data = the_file.read()
+    return json.loads(data)
 
-@app.post("/upload")
-def upload_single_file(file: UploadFile = File(...)):
-    return {"file_size": len(file)}
 
 @app.post("/todo", tags=["todos"])
 async def add_todo(todo: TodoItem) -> dict:
