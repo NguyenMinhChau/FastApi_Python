@@ -1,4 +1,4 @@
-from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi import FastAPI, UploadFile, File
 # chỉ định các host được truy cập API
 from fastapi.middleware.cors import CORSMiddleware
 # dùng file json
@@ -8,12 +8,10 @@ from pathlib import Path
 import os
 from .models.Todo import TodoItem
 import logging
-import shutil
-from typing import List
 #LOG: Thứ tự debug(), info(), warning(), error(), and critical()
+
 #Cách 1
 #logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s',level=logging.INFO)
-
 #Cách 2: Lưu xuống file.log
 logger = logging.getLogger()
 f_handler = logging.FileHandler('file.log')
@@ -29,7 +27,6 @@ origins = [
     "http://localhost:3000",
     "localhost:3000"
 ]
-
 app.add_middleware(
     CORSMiddleware,
     # Cho tất cả các host
@@ -43,6 +40,7 @@ app.add_middleware(
 async def read_root() -> dict:
     logging.error("This is error")
     return {"message": "Welcome to your todo list."}
+
 
 @app.get("/todo", tags=["todos"])
 async def get_todos() -> dict:
@@ -66,26 +64,7 @@ def read_todo_data():
 
 @app.post("/upload")
 def upload_single_file(file: UploadFile = File(...)):
-    my_path_file = os.path.join(folder.parent, "data", file.filename)
-    with open(my_path_file,"w") as my_file:
-        shutil.copyfileobj(file.file,my_file)
-    return {"filename": file.filename}
-
-@app.post("/upload-multiple")
-def upload_multiple_file(files: List[UploadFile] = File(...)):
-    try:
-        my_files = []
-        for file in files:
-            my_path_file = os.path.join(folder.parent, "data", file.filename)
-            my_files.append(file.filename)
-            with open(my_path_file,"w") as my_file:
-                shutil.copyfileobj(file.file,my_file)
-        return {"files": my_files}
-    except Exception as ex: 
-        print(ex)
-        logging.error(ex)
-        return HTTPException(status_code=400,detail="Error")
-
+    return {"file_size": len(file)}
 
 @app.post("/todo", tags=["todos"])
 async def add_todo(todo: TodoItem) -> dict:

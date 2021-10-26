@@ -84,7 +84,7 @@ def upload_multiple_file(files: List[UploadFile] = File(...)):
     except Exception as ex: 
         print(ex)
         logging.error(ex)
-        return HTTPException(status_code=400,detail="Error")
+        return HttpException(status)
 
 
 @app.post("/todo", tags=["todos"])

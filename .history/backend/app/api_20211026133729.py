@@ -80,11 +80,11 @@ def upload_multiple_file(files: List[UploadFile] = File(...)):
             my_files.append(file.filename)
             with open(my_path_file,"w") as my_file:
                 shutil.copyfileobj(file.file,my_file)
-        return {"files": my_files}
+        return {"files": my_file}
     except Exception as ex: 
         print(ex)
-        logging.error(ex)
-        return HTTPException(status_code=400,detail="Error")
+        logging
+        pass
 
 
 @app.post("/todo", tags=["todos"])

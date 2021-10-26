@@ -1,0 +1,366 @@
+2021-10-26 13:07:45,219 - fastapi - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2021-10-26 13:08:12,447 - uvicorn.error - INFO - Started server process [1516]
+2021-10-26 13:08:12,447 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:08:12,449 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:09:07,497 - root - ERROR - This is error
+2021-10-26 13:10:17,021 - uvicorn.error - INFO - Started server process [7668]
+2021-10-26 13:10:17,025 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:10:17,030 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:10:21,857 - uvicorn.error - INFO - Started server process [7412]
+2021-10-26 13:10:21,858 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:10:21,859 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:10:57,089 - uvicorn.error - INFO - Started server process [8516]
+2021-10-26 13:10:57,090 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:10:57,090 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:11:00,950 - uvicorn.error - INFO - Started server process [5028]
+2021-10-26 13:11:00,951 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:11:00,952 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:11:55,257 - uvicorn.error - INFO - Started server process [552]
+2021-10-26 13:11:55,259 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:11:55,262 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:12:02,699 - uvicorn.error - INFO - Started server process [7656]
+2021-10-26 13:12:02,700 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:12:02,701 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:12:11,474 - uvicorn.error - INFO - Started server process [8856]
+2021-10-26 13:12:11,475 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:12:11,476 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:12:16,709 - uvicorn.error - INFO - Started server process [1496]
+2021-10-26 13:12:16,710 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:12:16,711 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:13:35,282 - uvicorn.error - INFO - Started server process [11636]
+2021-10-26 13:13:35,284 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:13:35,286 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:14:04,648 - uvicorn.error - INFO - Started server process [9960]
+2021-10-26 13:14:04,648 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:14:04,650 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:14:10,729 - uvicorn.error - INFO - Started server process [7992]
+2021-10-26 13:14:10,730 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:14:10,731 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:14:18,223 - uvicorn.error - INFO - Started server process [10016]
+2021-10-26 13:14:18,227 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:14:18,230 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:14:25,264 - uvicorn.error - INFO - Started server process [13672]
+2021-10-26 13:14:25,275 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:14:25,291 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:14:30,633 - uvicorn.error - INFO - Started server process [7864]
+2021-10-26 13:14:30,633 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:14:30,634 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:14:34,697 - uvicorn.error - INFO - Started server process [5248]
+2021-10-26 13:14:34,698 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:14:34,699 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:15:19,676 - uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\fastapi\routing.py", line 161, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 805, in run_sync_in_worker_thread
+    return await future
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 743, in run
+    result = func(*args)
+  File "E:\Workspace\python\FastAPI_React\backend\app\api.py", line 70, in upload_single_file
+    shutil.copyfileobj(file.file,my_file)
+  File "C:\Users\NGUYEN MINH CHAU\AppData\Local\Programs\Python\Python310\lib\shutil.py", line 198, in copyfileobj
+    fdst_write(buf)
+TypeError: write() argument must be str, not bytes
+2021-10-26 13:16:19,006 - uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\fastapi\routing.py", line 161, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 805, in run_sync_in_worker_thread
+    return await future
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 743, in run
+    result = func(*args)
+  File "E:\Workspace\python\FastAPI_React\backend\app\api.py", line 70, in upload_single_file
+    shutil.copyfileobj(file.file,my_file)
+  File "C:\Users\NGUYEN MINH CHAU\AppData\Local\Programs\Python\Python310\lib\shutil.py", line 198, in copyfileobj
+    fdst_write(buf)
+TypeError: write() argument must be str, not bytes
+2021-10-26 13:18:56,173 - uvicorn.error - INFO - Shutting down
+2021-10-26 13:18:56,275 - uvicorn.error - INFO - Waiting for application shutdown.
+2021-10-26 13:18:56,276 - uvicorn.error - INFO - Application shutdown complete.
+2021-10-26 13:18:56,277 - uvicorn.error - INFO - Finished server process [5248]
+2021-10-26 13:19:08,526 - uvicorn.error - INFO - Started server process [2428]
+2021-10-26 13:19:08,527 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:19:08,527 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:19:52,309 - uvicorn.error - INFO - Started server process [4048]
+2021-10-26 13:19:52,310 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:19:52,311 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:19:56,492 - uvicorn.error - INFO - Started server process [15228]
+2021-10-26 13:19:56,493 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:19:56,494 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:20:18,743 - uvicorn.error - INFO - Started server process [6912]
+2021-10-26 13:20:18,744 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:20:18,745 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:20:43,941 - uvicorn.error - INFO - Started server process [12500]
+2021-10-26 13:20:43,942 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:20:43,943 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:21:31,511 - uvicorn.error - INFO - Started server process [2520]
+2021-10-26 13:21:31,512 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:21:31,513 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:22:22,852 - uvicorn.error - INFO - Started server process [12440]
+2021-10-26 13:22:22,852 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:22:22,853 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:23:02,458 - uvicorn.error - INFO - Started server process [1852]
+2021-10-26 13:23:02,458 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:23:02,460 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:23:14,196 - uvicorn.error - INFO - Started server process [15024]
+2021-10-26 13:23:14,197 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:23:14,197 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:23:18,460 - uvicorn.error - INFO - Started server process [10196]
+2021-10-26 13:23:18,461 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:23:18,461 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:23:26,899 - uvicorn.error - INFO - Started server process [9704]
+2021-10-26 13:23:26,899 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:23:26,900 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:23:36,247 - uvicorn.error - INFO - Started server process [15204]
+2021-10-26 13:23:36,248 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:23:36,249 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:24:06,805 - uvicorn.error - INFO - Started server process [12056]
+2021-10-26 13:24:06,806 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:24:06,807 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:24:13,274 - uvicorn.error - INFO - Started server process [5888]
+2021-10-26 13:24:13,278 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:24:13,283 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:24:18,440 - uvicorn.error - INFO - Started server process [14788]
+2021-10-26 13:24:18,441 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:24:18,442 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:24:24,534 - uvicorn.error - INFO - Started server process [4352]
+2021-10-26 13:24:24,535 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:24:24,535 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:24:30,077 - uvicorn.error - INFO - Started server process [9520]
+2021-10-26 13:24:30,079 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:24:30,079 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:25:21,906 - uvicorn.error - INFO - Started server process [9148]
+2021-10-26 13:25:21,907 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:25:21,908 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:25:27,341 - uvicorn.error - INFO - Started server process [13496]
+2021-10-26 13:25:27,343 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:25:27,345 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:26:00,302 - uvicorn.error - INFO - Started server process [8092]
+2021-10-26 13:26:00,303 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:26:00,304 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:26:38,117 - uvicorn.error - INFO - Started server process [7408]
+2021-10-26 13:26:38,117 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:26:38,118 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:26:53,715 - uvicorn.error - INFO - Started server process [14244]
+2021-10-26 13:26:53,718 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:26:53,724 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:28:14,019 - uvicorn.error - INFO - Started server process [12668]
+2021-10-26 13:28:14,020 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:28:14,020 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:30:04,977 - uvicorn.error - INFO - Started server process [12476]
+2021-10-26 13:30:04,978 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:30:04,978 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:30:24,186 - uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\fastapi\routing.py", line 161, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 805, in run_sync_in_worker_thread
+    return await future
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 743, in run
+    result = func(*args)
+  File "E:\Workspace\python\FastAPI_React\backend\app\api.py", line 71, in upload_single_file
+    shutil.copyfileobj(file.file,my_file)
+  File "C:\Users\NGUYEN MINH CHAU\AppData\Local\Programs\Python\Python310\lib\shutil.py", line 198, in copyfileobj
+    fdst_write(buf)
+TypeError: write() argument must be str, not bytes
+2021-10-26 13:32:19,625 - uvicorn.error - INFO - Started server process [7304]
+2021-10-26 13:32:19,626 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:32:19,627 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:32:35,873 - uvicorn.error - INFO - Started server process [7448]
+2021-10-26 13:32:35,874 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:32:35,874 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:33:00,722 - uvicorn.error - INFO - Started server process [1032]
+2021-10-26 13:33:00,722 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:33:00,723 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:33:07,289 - uvicorn.error - INFO - Started server process [8968]
+2021-10-26 13:33:07,289 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:33:07,290 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:33:58,635 - uvicorn.error - INFO - Shutting down
+2021-10-26 13:33:58,737 - uvicorn.error - INFO - Waiting for application shutdown.
+2021-10-26 13:33:58,737 - uvicorn.error - INFO - Application shutdown complete.
+2021-10-26 13:33:58,737 - uvicorn.error - INFO - Finished server process [8968]
+2021-10-26 13:34:10,187 - uvicorn.error - INFO - Started server process [4888]
+2021-10-26 13:34:10,187 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:34:10,188 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:34:56,281 - uvicorn.error - INFO - Started server process [11872]
+2021-10-26 13:34:56,282 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:34:56,282 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:35:01,063 - uvicorn.error - INFO - Started server process [4848]
+2021-10-26 13:35:01,064 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:35:01,065 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:35:07,562 - uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\middleware\cors.py", line 84, in __call__
+    await self.app(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\fastapi\applications.py", line 161, in openapi
+    return JSONResponse(self.openapi())
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\fastapi\applications.py", line 136, in openapi
+    self.openapi_schema = get_openapi(
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\fastapi\openapi\utils.py", line 387, in get_openapi
+    definitions = get_model_definitions(
+  File "E:\Workspace\python\FastAPI_React\venv\lib\site-packages\fastapi\utils.py", line 28, in get_model_definitions
+    model_name = model_name_map[model]
+KeyError: <class 'pydantic.main.Body_upload_single_file_upload_post'>
+2021-10-26 13:35:22,426 - uvicorn.error - INFO - Started server process [8320]
+2021-10-26 13:35:22,427 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:35:22,428 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:37:19,059 - uvicorn.error - INFO - Started server process [1384]
+2021-10-26 13:37:19,060 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:37:19,060 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:37:31,555 - uvicorn.error - INFO - Started server process [8416]
+2021-10-26 13:37:31,559 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:37:31,561 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:37:36,368 - uvicorn.error - INFO - Started server process [9968]
+2021-10-26 13:37:36,369 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:37:36,370 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:37:53,661 - uvicorn.error - INFO - Started server process [4236]
+2021-10-26 13:37:53,663 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:37:53,663 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:38:04,333 - uvicorn.error - INFO - Started server process [9852]
+2021-10-26 13:38:04,334 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:38:04,335 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:38:10,377 - uvicorn.error - INFO - Started server process [12996]
+2021-10-26 13:38:10,378 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:38:10,379 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:38:16,006 - uvicorn.error - INFO - Started server process [8868]
+2021-10-26 13:38:16,007 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:38:16,007 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:38:23,781 - uvicorn.error - INFO - Started server process [10580]
+2021-10-26 13:38:23,782 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:38:23,783 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:39:11,123 - uvicorn.error - INFO - Started server process [512]
+2021-10-26 13:39:11,123 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:39:11,124 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:39:16,464 - uvicorn.error - INFO - Started server process [7176]
+2021-10-26 13:39:16,465 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:39:16,466 - uvicorn.error - INFO - Application startup complete.
+2021-10-26 13:39:56,708 - root - ERROR - write() argument must be str, not bytes
+2021-10-26 13:40:44,656 - uvicorn.error - INFO - Shutting down
+2021-10-26 13:40:44,757 - uvicorn.error - INFO - Waiting for application shutdown.
+2021-10-26 13:40:44,758 - uvicorn.error - INFO - Application shutdown complete.
+2021-10-26 13:40:44,758 - uvicorn.error - INFO - Finished server process [7176]
+2021-10-26 13:40:57,257 - uvicorn.error - INFO - Started server process [10592]
+2021-10-26 13:40:57,257 - uvicorn.error - INFO - Waiting for application startup.
+2021-10-26 13:40:57,258 - uvicorn.error - INFO - Application startup complete.

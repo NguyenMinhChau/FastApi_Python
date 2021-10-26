@@ -1,4 +1,4 @@
-from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi import FastAPI, UploadFile, File, Htt
 # chỉ định các host được truy cập API
 from fastapi.middleware.cors import CORSMiddleware
 # dùng file json
@@ -77,14 +77,12 @@ def upload_multiple_file(files: List[UploadFile] = File(...)):
         my_files = []
         for file in files:
             my_path_file = os.path.join(folder.parent, "data", file.filename)
-            my_files.append(file.filename)
+            my_files.append(my_path_file)
             with open(my_path_file,"w") as my_file:
                 shutil.copyfileobj(file.file,my_file)
-        return {"files": my_files}
-    except Exception as ex: 
-        print(ex)
-        logging.error(ex)
-        return HTTPException(status_code=400,detail="Error")
+        return {"files": my_file}
+    except: 
+        pass
 
 
 @app.post("/todo", tags=["todos"])

@@ -70,21 +70,27 @@ def upload_single_file(file: UploadFile = File(...)):
     with open(my_path_file,"w") as my_file:
         shutil.copyfileobj(file.file,my_file)
     return {"filename": file.filename}
+    
+@app.post("/upload")
+def upload_single_file(file: UploadFile = File(...)):
+    my_path_file = os.path.join(folder.parent, "data", file.filename)
+    with open(my_path_file,"w") as my_file:
+        shutil.copyfileobj(file.file,my_file)
+    return {"filename": file.filename}
 
-@app.post("/upload-multiple")
-def upload_multiple_file(files: List[UploadFile] = File(...)):
-    try:
-        my_files = []
-        for file in files:
-            my_path_file = os.path.join(folder.parent, "data", file.filename)
-            my_files.append(file.filename)
-            with open(my_path_file,"w") as my_file:
-                shutil.copyfileobj(file.file,my_file)
-        return {"files": my_files}
-    except Exception as ex: 
-        print(ex)
-        logging.error(ex)
-        return HTTPException(status_code=400,detail="Error")
+# @app.post("/upload-multiple")
+# def upload_multiple_file(files: List[UploadFile] = File(...)):
+#     try:
+#         my_files = []
+#         for file in files:
+#             my_path_file = os.path.join(folder.parent, "data", file.filename)
+#             my_files.append(file.filename)
+#             with open(my_path_file,"w") as my_file:
+#                 shutil.copyfileobj(file.file,my_file)
+#         return {"files": my_file}
+#     except Exception as ex: 
+#         print(ex)
+#         pass
 
 
 @app.post("/todo", tags=["todos"])
