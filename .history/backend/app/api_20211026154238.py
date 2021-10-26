@@ -67,7 +67,7 @@ def read_todo_data():
 @app.post("/upload")
 def upload_single_file(file: UploadFile = File(...)):
     my_path_file = os.path.join(folder.parent, "data", file.filename)
-    with open(my_path_file,"wb") as my_file:
+    with open(my_path_file,"w") as my_file:
         shutil.copyfileobj(file.file,my_file)
     return {"filename": file.filename}
 
