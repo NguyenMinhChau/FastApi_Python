@@ -28,10 +28,37 @@ def get_all_user():
         })
     return {"data": items}
 
+
+@app.get("/category")
+def get_all_category():
+    session = MySessions()
+    categorys = session.query(Schema.Category).all()
+    items = []
+    for item in categorys:
+        items.append({
+            "id": item.Id,
+            "name": item.categoryName,
+            "product": item.products
+        })
+    return {"data": items}
+
+
+@app.get("/prducts")
+def get_all_products(price_from: float, price_to: float):
+    session = MySessions()
+    products = session.query(Schema.Product).filter(Schema.Product.price >= price_from).filter(Schema.Product.price <= price_to).all()
+    items = []
+    for item in products:
+        items.append({
+            "id": item.Id,
+            "name": item.productName,
+            "category": item.category
+        })
+    return {"data": items}
+
 # Fix bug
 @app.post("/users")
 def create_user(model: MyModel.User):
-    print(model)
     myuser = Schema.UserInfo
     myuser.username = model.username
     myuser.password = model.password
